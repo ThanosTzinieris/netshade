@@ -57,6 +57,28 @@ Because of their straightforward layout, Netpbm images are particularly useful f
 - Image transformation
 - Low-level graphical computation
 
+### Netpbm Image Types
+
+Netpbm images are identified through short "magic numbers" placed at the beginning of each file:
+
+| Format | Description |
+|---|---|
+| P1 | ASCII black-and-white |
+| P2 | ASCII grayscale |
+| P3 | ASCII RGB color |
+| P4 | Binary black-and-white |
+| P5 | Binary grayscale |
+| P6 | Binary RGB color |
+
+Each file stores:
+
+1. A format identifier (`P1`–`P6`)
+2. Image dimensions
+3. Maximum channel value (where applicable)
+4. Raw pixel data
+
+Because the structure is intentionally minimal and human-readable, Netpbm formats are especially useful for studying low-level graphical data representation and image transformation pipelines.
+
 ---
 
 ## Processing Pipeline
@@ -101,6 +123,44 @@ netpbm.h
 test_p3.ppm
 test_p6.ppm
 ```
+
+---
+
+## Quick Start
+
+### Compile
+
+```bash
+gcc main.c convert.c netpbm.c -o netshade
+```
+
+### Run
+
+Convert a color image to grayscale:
+
+```bash
+./netshade < test_p6.ppm > output.pgm
+```
+
+Convert a grayscale image to binary black-and-white:
+
+```bash
+./netshade < test_p3.ppm > output.pbm
+```
+
+---
+
+## Included Test Images
+
+The repository includes two minimal Netpbm sample files for testing:
+
+- `test_p6.ppm`
+  - Binary RGB color image (P6)
+
+- `test_p3.ppm`
+  - ASCII RGB color image (P3)
+
+These files can be used to verify both parsing and transformation behavior across different Netpbm encoding modes.
 
 ---
 
