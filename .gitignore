@@ -21,6 +21,7 @@
 *.project
 *.dev
 *.pdf
+Makefile.win
 
 
 # =========================
