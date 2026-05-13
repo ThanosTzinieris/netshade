@@ -128,31 +128,25 @@ gcc main.c convert.c netpbm.c -o netshade
 
 ### Run
 
-Convert a color image to grayscale:
-
 ```bash
-./netshade < test_p6.ppm > output.pgm
+./netshade
 ```
 
-Convert a grayscale image to binary black-and-white:
-
-```bash
-./netshade < test_p3.ppm > output.pbm
-```
+The program provides a simple console-based interface for loading, converting, and exporting Netpbm images.
 
 ---
 
 ## Included Test Images
 
-The repository includes two minimal Netpbm sample files for testing:
-
-- `test_p6.ppm`
-  - Binary RGB color image (P6)
+The repository includes two sample Netpbm images for testing:
 
 - `test_p3.ppm`
-  - ASCII RGB color image (P3)
+  - ASCII RGB image (P3)
 
-These files can be used to verify both parsing and transformation behavior across different Netpbm encoding modes.
+- `test_p6.ppm`
+  - Binary RGB image (P6)
+
+These files can be used to verify parsing and transformation behavior across multiple Netpbm encoding modes.
 
 ---
 
