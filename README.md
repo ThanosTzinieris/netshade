@@ -90,23 +90,15 @@ Rather than separating operations into isolated utilities, the project was desig
 3. Transforming pixel values
 4. Exporting converted image states
 
+![Transformation Example](img/graph.jpg)
+
 ---
 
 ## Example Transformations
 
 ### Color → Grayscale → Binary Threshold
 
-![Transformation Example](img/graph.jpg)
-
 The project progressively reduces visual information through computational transformation, demonstrating how image data can be abstracted into simplified graphical states.
-
----
-
-## Experimental Results
-
-Although academically focused in scope, certain threshold-processing operations occasionally produced unexpectedly abstract or perceptual visual results.
-
-![Threshold Example](img/don.jpg)
 
 ---
 
@@ -174,3 +166,6 @@ This project became an important introduction to:
 - Sequential logic
 - Systems-oriented programming
 - The computational foundations of digital imaging
+
+
+![Threshold Example](img/don.jpg)
